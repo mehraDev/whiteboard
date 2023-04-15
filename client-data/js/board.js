@@ -563,6 +563,9 @@ Tools.toolHooks = [
 			compiled["mousemove"] = compile(listeners.move);
 			compiled["touchmove"] = compileTouch(listeners.move);
 		}
+		if (listeners.dblclick) {
+			compiled["dblclick"] = compile(listeners.dblclick);
+		}
 		if (listeners.release) {
 			var release = compile(listeners.release),
 				releaseTouch = compileTouch(listeners.release);

@@ -163,6 +163,27 @@ const Tools = {
     const pathstring = "M" + el.x + " " + el.y + "L" + el.x2 + " " + el.y2;
     return renderPath(el, pathstring);
   },
+
+  "Dotted line": function (el) {
+    const pathstring = "M" + el.x + " " + el.y + "L" + el.x2 + " " + el.y2;
+    return renderPath(el, pathstring, {"stroke-dasharray": "5,5"});
+  },
+
+  // "Connected line": function (el) {
+  //   const dotSize = 3;
+  //   const numDots = Math.ceil(Math.sqrt(Math.pow(el.x2 - el.x, 2) + Math.pow(el.y2 - el.y, 2)) / dotSize); 
+  //   const dx = (el.x2 - el.x) / numDots; 
+  //   const dy = (el.y2 - el.y) / numDots;
+  
+  //   let dotString = "";
+  //   for (let i = 0; i < numDots; i++) {
+  //     const x = el.x + i * dx; 
+  //     const y = el.y + i * dy;
+  //     dotString += "M" + x + " " + y + " m" + (-dotSize / 2) + ",0" + " a" + (dotSize / 2) + "," + (dotSize / 2) + " 0 1,0 " + dotSize + ",0" + " a" + (dotSize / 2) + "," + (dotSize / 2) + " 0 1,0 " + (-dotSize) + ",0"; 
+  //   }
+  
+  //   return renderPath(el, dotString, {"stroke-dasharray": "none"});
+  // }
 };
 
 /**

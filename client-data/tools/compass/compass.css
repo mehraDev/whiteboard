@@ -1,0 +1,12 @@
+line,
+circle {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.pointA,
+.pointB,
+.pointC {
+  fill: black;
+}
